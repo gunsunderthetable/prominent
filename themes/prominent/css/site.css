@@ -12,7 +12,8 @@ body {
 
 h1,h2,h3,h4,h5 {
     font-family: 'Montserrat', Georgia, sans-serif;
-    font-weight:500;
+    font-weight:400;
+    color:#e12e90;
 }
 
 p {
@@ -162,9 +163,7 @@ a.mobileNav {
 }
 /*----------------------- end of alternate boxes --------------------------*/
 
-.box:hover {
-    opacity:0.8;
-}
+
 .box:before {
     content: "";
     display: block;
@@ -199,6 +198,7 @@ a.mobileNav {
     padding:17% 36%;
 }
 
+/*--------------------------------------------------------------------------------------------*/
 
 .boxText h2 {
     font-size:1.6em;
@@ -245,7 +245,17 @@ img.boxImage {
     width:100%;
     height:auto;
     z-index:88;
+    opacity:0.2;
+    webkit-transition: opacity .3s ease-in;
+    transition: opacity .3s ease-in;   
+
 }
+
+.box:hover img.boxImage {
+    opacity:1;
+}
+
+
 .boxTextDivider {
     width:100%;
     margin: 12px 0;
@@ -270,7 +280,7 @@ img.boxImage {
 /*---------------------------main homepage panel-----------------------*/
 #pagePanel {
     width:92%;
-    padding:20px 4% 50px;
+    padding:40px 4% 50px;
     background:white;
     color:black;
     margin-bottom:30px;
@@ -278,8 +288,7 @@ img.boxImage {
 
 #pagePanel.home {
     width:100%;
-    padding:20px 0 30px;
-    padding-top:40px;
+    padding:80px 0 30px;
     /*--padding makes room for the fixed top-menu ----*/
 
     background:transparent;
@@ -292,6 +301,12 @@ img.boxImage {
 #homePageContent {
     margin-bottom:30px;
 }
+.centredContent {
+    width:50%;
+    padding-left:25%;
+    text-align:center;
+}
+
 /*-----------------------------------page styles---------------------------------------*/
 #breadBox {
     margin:20px 0 20px;
@@ -559,6 +574,7 @@ a.readMore:hover {
 #footer h2 {
     font-weight:700;
     margin-top:0;
+    font-size:1.4em;
     color:#e5097e;
 }
 #footer .left {

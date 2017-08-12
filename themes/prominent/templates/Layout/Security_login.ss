@@ -3,7 +3,7 @@
         <div id="pagePanel" class="clearFix">
 
             <div class="pageContent">
-            <h1>Welcome to the website of the Cambridgeshire and Peterborough Combined Authority</h1>
+            <h1>Welcome to the website of Prominent PR</h1>
            
             <p>Our website is close to being finished and will be available to the public soon.</p>
             <hr>

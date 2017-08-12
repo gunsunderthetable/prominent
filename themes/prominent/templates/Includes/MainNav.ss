@@ -2,8 +2,7 @@
     <div class="container">
         <div id="mainNav" class="twelve columns clearFix">
             <a href="$BaseHref" ><img class="desktopHeader" src="$ThemeDir/images/header_logo.png" /></a>
-            <a href="$BaseHref"><img class="mobileHeader" src="$ThemeDir/images/logo.png" alt="logo" title="logo" /></a>
-
+            <a href="$BaseHref"><img class="mobileHeader" src="$ThemeDir/images/mobile_logo.png" alt="logo" title="logo" /></a>
             <% if $HeaderLinks %> 
             <ul>
                 <% loop $HeaderLinks %>

@@ -1,32 +1,32 @@
     <div id="pagePanel" class="home clearFix">
         <div id="homePageContent">
-        <%-- ------------------- slides start --------------------- --%>
-        <% if Slides %>
-        <div id="sliderBox" class="desktop">
-            <div class="content">
-                <div class="flexslider loading">
-                  <ul class="slides">
-                    <% loop Slides %>
-                        <li>
-                            <img src="$SlideImage.CroppedImage(600,484).URL" alt="$Title" title="$Title" />
-                            <p class="flex-caption">
-                                <span>$Title</span>$Description
-                                <% if $PageID %>
-                                    <% with $Page %><a href="$Link">Read more</a><% end_with %>
-                                <% end_if %>
-                            </p>
-                        </li>
-                    <% end_loop %>
-                  </ul>
+            <%-- ------------------- slides start --------------------- --%>
+            <% if Slides %>
+            <div id="sliderBox" class="desktop">
+                <div class="content">
+                    <div class="flexslider loading">
+                      <ul class="slides">
+                        <% loop Slides %>
+                            <li>
+                                <img src="$SlideImage.CroppedImage(600,484).URL" alt="$Title" title="$Title" />
+                                <p class="flex-caption">
+                                    <span>$Title</span>$Description
+                                    <% if $PageID %>
+                                        <% with $Page %><a href="$Link">Read more</a><% end_with %>
+                                    <% end_if %>
+                                </p>
+                            </li>
+                        <% end_loop %>
+                      </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <% end_if %>
+            <% end_if %>
 
-        <%-- ------------------- page content -------------------- --%>
-
-        <h1>$Title</h1>
-            $Content
+            <%-- ------------------- page content -------------------- --%>
+            <div class="centredContent">
+                $Content
+            </div>
         </div>
 
         <%-- ------------------- boxes start --------------------- --%>
