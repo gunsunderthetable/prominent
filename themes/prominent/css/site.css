@@ -16,6 +16,9 @@ h1,h2,h3,h4,h5 {
     color:#e12e90;
 }
 
+h1 {
+    font-weight:300;
+}
 p {
     line-height:1.5;
 }
@@ -144,19 +147,23 @@ a.mobileNav {
     margin:6px 0.5% ;
     color:white;
     background:#455170;
+    opacity:0.9;
     float:left;    
     -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease;
     z-index:1;
 }
+.box:hover {
+    opacity:1;
+}
 
 /*----------------------- alternate boxes --------------------------*/
 .box.first, .box.multipleOf7 {
-    width:65.7%;
+    width:65.5%;
 }
 .box.first:before, .box.multipleOf7:before {
     content: "";
     display: block;
-    padding-top: 49.1%; 
+    padding-top: 49.3%; 
 }
 .box.multipleOf8 {
     clear:left;
