@@ -60,4 +60,7 @@
     </div>
 
 
+<%-- <% require css("revolution/css/pe-icon-7-stroke.css") %>
+
+<% require javascript("cms/javascript/LeftAndMain.js") %> --%>
 

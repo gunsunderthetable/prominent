@@ -1,6 +1,5 @@
 <div class="twelve columns">
         <div id="pagePanel" class="clearFix">
-            $Breadcrumbs 
 
             <div class="pageContent">
                 <h1>$Title</h1>

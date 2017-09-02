@@ -1,6 +1,6 @@
 <% if $Menu(2) %>
 <div id="subNav" class="nav desktop">
-   <h2>In this section</h2>
+   <h2>Top Stories</h2>
     <ul class="clearFix">
         <% loop Menu(2) %>
         <li>

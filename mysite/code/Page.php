@@ -1,17 +1,44 @@
 <?php
 class Page extends SiteTree {
 
-    	private static $db = array(
-            "FullWidthPage" => "Boolean"
+       private static $db = array(
+            'ShowNavigationPanel' => 'Boolean',
+            'MenuIntro' => 'Text',
+            'PageIntro' => 'Text',
+            'AlternateHeaderStyle' => 'Boolean'
 	   );
         
 	   private static $has_one = array(
             "MyWidgetArea" => "WidgetArea"
         );
+
+       private static $has_many = array(
+            "Boxes" => "Box"
+        );
         
-        public function getCMSFields() {
+       public function getCMSFields() {
             $fields = parent::getCMSFields();
-            //$fields->addFieldToTab("Root.Main",new CheckBoxField("FullWidthPage","Make this page full width"),"Content");          
+
+            $fields->addFieldToTab('Root.TileInfo', new TextAreaField("MenuIntro", "Parent page intro text")); 
+            $fields->addFieldToTab('Root.Main', new TextAreaField("PageIntro", "Bold page intro text"), "Content");  
+            $fields->addFieldToTab('Root.Main', new CheckBoxField("AlternateHeaderStyle", "Alternate header style"), "Content");
+            $fields->addFieldToTab('Root.Main', new CheckBoxField("ShowNavigationPanel", "Show righ hand navigation"), "Content");  
+
+            $gridFieldBoxConfig = GridFieldConfig::create()->addComponents(
+              new GridFieldSortableRows('SortOrder'),                         
+              new GridFieldToolbarHeader(),
+              new GridFieldAddNewButton('toolbar-header-right'),
+              new GridFieldSortableHeader(),
+              new GridFieldDataColumns(),
+              new GridFieldPaginator(30),
+              new GridFieldEditButton(),
+              new GridFieldDeleteAction(),
+              new GridFieldDetailForm()
+            );
+
+            $gridField = new GridField("Boxes", "Boxes", $this->Boxes(), $gridFieldBoxConfig);
+            $fields->addFieldToTab("Root.Boxes", $gridField); 
+            
             $fields->addFieldToTab("Root.Widgets", new WidgetAreaEditor("MyWidgetArea"));
             return $fields;
         }

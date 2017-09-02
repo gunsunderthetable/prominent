@@ -1,28 +1,20 @@
-<div class="blogSummary clearFix">
-    
-    <div class="blogImageThumb">
-    	<% if $BlogImage %>
-            <% with BlogImage %>
-            <img src="$CroppedImage(300,200).URL" alt="$Title" />
-            <% end_with %>
-        <% else %>
-        	<img src="$ThemeDir/images/blog_logo.png" alt="news logo" />
-	    <% end_if %> 
-    </div>
-	<div class="blogListing">    
-		<h2 class="postTitle"><a href="$Link" title="<% _t('BlogSummary_ss.VIEWFULL', 'View full post titled -') %> '$Title'">$MenuTitle</a></h2>
-		<p class="authorDate">$Date.Long</p>
+<div class="box blogbox position-$pos $Colour $FirstLast<% if $MultipleOf(7) %> multipleOf7<% end_if %><% if $MultipleOf(8) %> multipleOf8<% end_if %>">
+    <div class="content">
+        <a href="$Link">
+        <% if $BlogImageID %>
+            <% if $First || $MultipleOf(7) %>
+            <%-- trap first and everyseventh boxes and use different aspect --%>
+                <img class="boxImage" src="$BlogImage.CroppedImage(1040,520).URL" alt="$Title" title="$Title" />
+            <% else %>
+                <img class="boxImage" src="$BlogImage.CroppedImage(520,520).URL" alt="$Title" title="$Title" />
+            <% end_if %>
 
-		<% if BlogHolder.ShowFullEntry %>
-			$Content
-		<% else %> 
-			<p>$Content.FirstSentence(html)</p>
-		<% end_if %>
-		
-		<p class="blogVitals">
-			<a href="$Link" class="readmore" title="Read Full Post">
-				Read more
-			</a>
-		</p>
-	</div>
+        <% end_if %>
+        <div class="boxText">
+        <h2>$Title</h2>
+        <div class="boxTextDivider"></div>
+        <p>$Content.FirstSentence(html)</p>
+        </div>
+       </a>
+    </div>
 </div>

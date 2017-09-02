@@ -226,26 +226,9 @@ a.mobileNav {
     color:white;
 }
 
-.boxText.bottom {
-    padding-top:30%;
-}
 
-.boxText.middle {
-    padding-top:20%;
-}
-
-span.linkText {
-    position:absolute;
-    bottom:0;
-    left:0;    
-    width:100%;
-    height:14%;
-    padding:3% 0 1%;
-    text-align:center;
-    font-weight:bold;
-    font-size:1.2em;
-}
-img.boxImage {
+.pageContent img.boxImage {
+    /* ----- fixes pagecontent adding padding to box images - unwanted effect ----- */
     position:absolute;
     top:0;
     left:0;
@@ -254,10 +237,12 @@ img.boxImage {
     z-index:88;
     opacity:0.2;
     webkit-transition: opacity .3s ease-in;
-    transition: opacity .3s ease-in;   
-
+    transition: opacity .3s ease-in;
+    padding-top:0;
 }
-
+.pageContent.pageContent login {
+    padding-top:120px;
+}
 .box:hover img.boxImage {
     opacity:1;
 }
@@ -270,7 +255,7 @@ img.boxImage {
     background:white;
 }
 
-------------------------colours for boxes ---------------------
+/*------------------------colours for boxes ---------------------*/
 .blue {
     background:#455170;
 }
@@ -283,11 +268,17 @@ img.boxImage {
 .pink {
     background:#e12e90;
 }
-
+/*------------------------colours for blog boxes ---------------------*/
+.box.blogbox:nth-child(2n) {
+    background:#17264c;
+}
+.box.blogbox:nth-child(3n) {
+    background:#5c6670;
+}
 /*---------------------------main homepage panel-----------------------*/
 #pagePanel {
-    width:92%;
-    padding:40px 4% 50px;
+    width:100%;
+    padding:70px 0 50px;
     background:white;
     color:black;
     margin-bottom:30px;
@@ -318,6 +309,22 @@ img.boxImage {
 #breadBox {
     margin:20px 0 20px;
 }
+
+#headerWrap {
+    background:#adabae;
+    padding:26px 0 2px 2%;
+}
+
+#headerWrap.alternateHeaderStyle {
+    background:#17264c;
+}
+#headerWrap h1 {
+    font-size:2.2em;
+    color:white;
+    border-left:7px solid #e5097e;
+    padding-left: 1%;
+}
+
 #standardPage {
     padding:0%;
     width:100%;
@@ -327,13 +334,10 @@ img.boxImage {
 
 
 .pageContent {
-    width:70%;
+    width:100%;
     float:left;
 }
 
-.pageContent.members {
-    width:100%;
-}
 
 .pageContent ul li {
     list-style:disc outside;
@@ -353,65 +357,75 @@ img.boxImage {
     height:auto;
     padding-top:5px;
 }
-.rightPanel {
+
+#pagePanel.showNavPanel .rightPanel {
     width:25%;
+    display:block;
     float:right;
 }
 
-#standardPage.fullWidthLayout .rightPanel {
+.rightPanel {
     display:none;
 }
 
+#pagePanel.showNavPanel .pageContent {
+    width:70%;
+}
 
 
 #landingText {
     text-align:center;
     margin-bottom:2em;
 }
-/*-----------------------------------Members ----------------------------------*/
 
-#memberDetails {
-    background:#d2d7d3;
+#readablePageWidth {
     padding:30px 3%;
     width:94%;
-    margin-bottom:30px;
 }
-
-#memberText {
-    width:60%;
-    float:left;
+#readablePageWidth.restricted {
 }
-
-img.memberPortrait {
-    width:33%;
-    height:auto;
-    float:right;
-}
-.memberBox a img:hover {
-    opacity:0.9;
-}
-
-.memberBox {
-    width:22%;
-    float:left;
-    margin:20px 1.5%;
-    text-align:center;
-}
-.memberBox a {
-    color:black;
-}
-.memberBox a:hover {
-    color:grey;
-}
-.pageContent .memberBox img {
-    width:100%;
+#readablePageWidth img {
     max-width:100%;
+    min-width:100%;
+    height:auto;
+    padding-top:12px;
+    background:white;
+}
+.captionImage {
+    max-width:100%;
+    min-width:100%;
+    background: #e6e6e7;
+    margin:0 0 24px 0;
+}
+p.pageIntro {
+  font-size:1.4em;
+  line-height:1.3;
+  color:#1e2649;
+  margin-bottom:20px;
+
+}
+p.caption {
+    padding:10px 2%;
+}
+/*------------------------------------------blockquotery-----------------------------------------------*/
+blockquote {
+  background: #e6e6e7;
+  border-left: 10px solid #1c2648;
+  margin: 24px 10px 24px 0;
+  width:96%;
+  padding: 24px 2%;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+  display: inline;
+  color:#1e2649;
+  font-size:1.4em;
+  line-height:1.3;
 }
 
 /*----------------------------------------------Sub navigation--------------------------------------------*/
 #subNav {
-    border:1px solid silver;
-    background:white;
     width:90%;
     padding:5%;
     margin-bottom:5%;
@@ -430,10 +444,6 @@ img.memberPortrait {
     color:white;
 }
 
-.sidrNav #menuImages {
-    padding:0 6px 8px 8px;
-    border-bottom: 1px solid white;
-}
 #subNav.sidrNav a:hover {
     color:silver;
 }
@@ -446,9 +456,7 @@ img.memberPortrait {
     font-weight: normal;
     font-size:1.05em;
 }
-img.menuLogo {
-    width:85%;
-}
+
 .sidr {
     background:black;
 }
@@ -480,14 +488,12 @@ img.menuLogo {
 .nav ul li {
     border-bottom:none;
     margin-bottom:6px;
-    padding:8px 0 4px 28px;    
-    background: url(../images/right_arrow.png) no-repeat 0 10px;
+    padding:8px 0 4px;    
 }
 .nav ul li a {
-    font-size:1.1em;
-    font-weight:bold;
+    font-size:1.3em;
     text-decoration:none;  
-    color:black;
+    color:#17264c;
     margin:0 ;
     line-height:1;
     
@@ -496,60 +502,6 @@ img.menuLogo {
     color:silver;
 }
 .nav ul li a.current,#subNav ul li a.section  {color:grey;}
-/*#simpleNav ul li a.current, a.galleryTop.current {color:red;}*/
-
-
-
-/*-----------------------------------News and event panels-------------------------------*/
-#newsEventsWrap {
-    width:100%;
-}
-.feature {
-    padding:6px 0;
-    border-bottom:1px solid silver;
-}
-#news, #events {
-    min-height:400px;
-}
-#news {
-    width:28%;
-    background:white;
-    padding:8px 2%;
-    float:left;
-}
-#events {
-    width:65%;
-    float:right;
-}
-#news h2, #events h2 {
-    font-size:1.3em;
-    margin-top:8px;
-}
-#newsEventsWrap h3 {
-    font-size:1.1em;
-    padding:0;
-    margin:0 0 4px 0;
-}
-p.eventDates {
-    margin:0;
-}
-.grey {
-    color:grey;
-}
-
-a.readMore {
-    color:black;
-    display:inline-block;
-    width:auto;
-    margin:12px 0 0 0;
-    padding:4px 20px;
-    font-weight:normal;
-    border:1px solid black;
-}
-a.readMore:hover {
-    background:black;
-    color:white;
-}
 
 
 /*------------------------- sidebar ----------------------------*/
@@ -669,49 +621,7 @@ a.readMore:hover {
 }
 
 
-/*------------image links in the left nav homepgae---------------------*/
-.imageLink {
-    position:relative;
-    background:#F05449;
-    margin:26px 0 0;
-    overflow:hidden;
-}
-.imageLink:hover {
-    opacity:0.7;
-}
-.imageLinkText {
-    width:80%;
-    margin-left:10%;
-    position:absolute;
-    top:32%;
-    text-align:center;
-}
 
-.imageLink h1 {
-    line-height:1;
-    letter-spacing:1px;
-    color:white;
-    font-weight:700;
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-shadow: 1px 1px 1px #000;
-}
-.imageLink h2 {
-    font-size:1.8em;
-    line-height:1;
-    margin-bottom:8px;
-    background:transparent;
-    color:white;
-    font-weight:300;
-    text-shadow: 1px 1px 1px #000;    
-}
-
-.imageLink img {
-    width:100%;
-    height:auto;
-    opacity:0.8;
-    display:block;
-}
-.imageLink a {line-height:-1;}
 
 /*------------------------------------- widgets and stuff -------------------------------*/
 .widget {
@@ -748,34 +658,7 @@ img.center {
     clear:both;
 }
 
-/*----------------------------- asset lister in page -----------------------------------------------*/
 
-.assetLister li.jpg, .assetLister li.jpeg{ background:url(../images/file-icons/jpg.png) no-repeat left top; }
-.assetLister li.mov, .assetLister li.mp4{ background:url(../images/file-icons/video.png) no-repeat left top; }
-.assetLister li.mp3 { background:url(../images/file-icons/mp3.png) no-repeat left top; }
-
-.assetLister li.ppt, .assetLister li.pptx{ background:url(../images/file-icons/blank.png) no-repeat left top; }
-.assetLister li.doc, .assetLister li.docx{ background:url(../images/file-icons/doc.png) no-repeat left top; }
-.assetLister li.png{ background:url(../images/file-icons/png.png) no-repeat left top; }
-.assetLister li.gif{ background:url(../images/file-icons/gif.png) no-repeat left top; }
-.assetLister li.xls, .assetLister li.xlsx{ background:url(../images/file-icons/xls.png) no-repeat left top; }
-.assetLister li.pdf{ background:url(../images/file-icons/pdf.png) no-repeat left top; }
-.assetLister li.csv{ background:url(../images/file-icons/csv.png) no-repeat left top; }
-
-.assetLister ul li {
-    list-style-type:none;
-    padding:0 0 12px 50px;
-    line-height:1.6;
-}
-
-.assetLister .size {
-    color:silver;
-}
-
-/*---------------------- pour le widget ---------------------------------------------------*/
-.assetListerWidget ul {
-    margin:26px 0 0 12px;
-}
 
 /*--------------------------------------blog ----------------------------------------------*/
 
@@ -890,18 +773,7 @@ input[type="checkbox"] {
 }
 
 
-/*---------------------------------Image Gallery------------------------------------*/
-#imageGallerytLister ul li{
-    list-style-type:none;
-}
-#imageGallerytLister ul li img {
-    width:22%;
-    margin:0 1% 12px 1%;
-    float:left;
-}
-#imageGallerytLister ul li img:hover {
-    opacity:0.8;
-}
+
 /*------------------------pagination----------------------------*/
 
 

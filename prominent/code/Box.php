@@ -11,7 +11,7 @@
 		
 		public static $has_one = array(
 			'BoxImage' => 'Image',
-			'HomePage' => 'HomePage',
+			'Page' => 'Page',
 			'LinkPage' => 'SiteTree'
 		);
                 
