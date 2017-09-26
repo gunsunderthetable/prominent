@@ -1,0 +1,98 @@
+
+#animationWrapper {
+    position: relative;
+	width:100%;
+	position:relative;
+	background:#d1d2d3;
+	margin-bottom:30px;
+}
+
+#animationWrapper:before {
+    content: "";
+    display: block;
+    padding-top: 55%; 
+}
+
+.content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.stub {
+	position:absolute;
+	top:27%;
+	left:25%;
+	width:12%;
+	height:auto;
+	animation: 18.5s ease 0s normal forwards 1 fadeoutlong;
+}
+
+.stub img, .base img {
+	width:100%;
+	height:auto;
+}
+
+.base {
+	opacity:0;
+	position:absolute;
+	top:23%;
+	left:37.5%;
+	width:30.5%;
+	height:auto;
+}
+
+.proactive {
+	animation: 3s ease 0.5s normal forwards 1 fadeinout;
+}
+.procure {
+	animation: 3s ease 3.5s normal forwards 1 fadeinout;
+}
+.professional {
+	animation: 3s ease 6.5s normal forwards 1 fadeinout;
+	left:37%;
+}
+.proficient {
+	animation: 3s ease 9.5s normal forwards 1 fadeinout;
+	left:37%;
+}
+.prose {
+	animation: 3s ease 12.5s normal forwards 1 fadeinout;
+	left:37%;
+}
+.proud {
+	animation: 3s ease 15.5s normal forwards 1 fadeinout;
+	left:37%;
+}
+
+.final {
+	animation: 3s ease 18.5s normal forwards 1 fadeandstay;
+	top:25%;
+	width:36.5%;
+	left:25%;
+
+}
+
+@keyframes fadeinout {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    75% {opacity:1;}
+    100% {opacity:0;}	
+}
+
+@keyframes fadeandstay {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes fadeoutlong {
+	0% {opacity:0;left:23%;}
+	5% {left:25%;}
+	10% {opacity:1;}
+	95% {opacity:1;}
+	100% {opacity:0;}
+
+}

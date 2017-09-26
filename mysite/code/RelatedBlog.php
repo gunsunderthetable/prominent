@@ -22,5 +22,5 @@
 				new TreeDropdownField('PageID', 'Select a page to link to from the image', 'SiteTree')
 			);
 		}
-		
+
 	}

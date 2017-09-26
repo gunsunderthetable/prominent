@@ -1,0 +1,43 @@
+#animationWrapper {
+	width:100%;
+	height:150px;
+	position:relative
+}
+.stub {
+	position:absolute;
+	top:40px;
+	left:10%;
+	width:20%;
+}
+.stub img, .base img {width:100%;height:auto;}
+
+.base {
+	opacity:0;
+	position:absolute;
+	top:40px;
+	left:34%;
+	width:30%;
+}
+.suffix1 {
+	animation: 3s ease 0s normal forwards 1 fadeinout;
+}
+
+.suffix2 {
+	animation: 3s ease 3.5s normal forwards 1 fadeinout;
+}
+
+.final {
+	animation: 3s ease 6.5s normal forwards 1 fadeandstay;
+}
+
+@keyframes fadeinout {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    75% {opacity:1;}
+    100% {opacity:0;}	
+}
+@keyframes fadeandstay {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    100% {opacity:1;}
+}

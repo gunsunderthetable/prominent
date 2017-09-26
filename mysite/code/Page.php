@@ -22,7 +22,7 @@ class Page extends SiteTree {
             $fields->addFieldToTab('Root.TileInfo', new TextAreaField("MenuIntro", "Parent page intro text")); 
             $fields->addFieldToTab('Root.Main', new TextAreaField("PageIntro", "Bold page intro text"), "Content");  
             $fields->addFieldToTab('Root.Main', new CheckBoxField("AlternateHeaderStyle", "Alternate header style"), "Content");
-            $fields->addFieldToTab('Root.Main', new CheckBoxField("ShowNavigationPanel", "Show righ hand navigation"), "Content");  
+            $fields->addFieldToTab('Root.Main', new CheckBoxField("ShowNavigationPanel", "Show right hand navigation"), "Content");  
 
             $gridFieldBoxConfig = GridFieldConfig::create()->addComponents(
               new GridFieldSortableRows('SortOrder'),                         

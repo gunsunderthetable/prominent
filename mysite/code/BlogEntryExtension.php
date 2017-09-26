@@ -2,10 +2,6 @@
 
 class BlogEntryExtension extends DataExtension {
 
-    private static $db = array(
-		'MenuIntro' => 'Text',
-        'PageIntro' => 'Text'
-      );
     private static $has_one = array(
         'BlogImage' => 'Image'
       );
@@ -14,8 +10,6 @@ class BlogEntryExtension extends DataExtension {
       );
 
     public function updateCMSFields(FieldList $fields) {
-          $fields->addFieldToTab('Root.Main', new TextField('MenuIntro', 'Menu intro'),'Date');
-          $fields->addFieldToTab('Root.Main', new TextField('PageIntro', 'Page intro'),'Date');
           $fields->addFieldToTab('Root.Main', new UploadField('BlogImage', 'Blog Image'),'Content');
 
           $gridFieldBoxConfig = GridFieldConfig::create()->addComponents(
@@ -31,7 +25,13 @@ class BlogEntryExtension extends DataExtension {
             );
           $gridField = new GridField("RelatedBlogs", "RelatedBlog", $this->owner->RelatedBlogs(), $gridFieldBoxConfig);
           $fields->addFieldToTab("Root.RelatedBlogs", $gridField); 
-    }    
+    }
+
+    public function getMyBlogSiblings() {
+         if ($blogSiblings = BlogEntry::get()->filter('ParentID', $this->owner->ParentID)->sort('Date', 'DESC')) {
+            return $blogSiblings;
+         } 
+    } 
     
     
 }

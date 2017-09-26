@@ -2,6 +2,10 @@
 
 class TeamMemberPage extends ContentPage {
 
+        public static $db = array(
+            'Linkedin' => 'varchar(200)',
+            'Email' => 'varchar(200)'
+        );
         public static $has_one = array(
             'StaffImage' => 'Image'
             );
@@ -13,8 +17,13 @@ class TeamMemberPage extends ContentPage {
             $fields->removeByName("Map");
             $fields->removeByName("ShowNavigationPanel");
             $fields->removeByName("ListChildrenAsTiles");
+            $fields->removeByName("Boxes");
+
+            $fields->addFieldToTab('Root.Main', new TextField("Linkedin", "Linkedin link (include http://)"),'Content');  
+            $fields->addFieldToTab('Root.Main', new TextField("Email", "Email link"),'Content');  
             
             $fields->addFieldToTab('Root.TileInfo', new UploadField("StaffImage", "Staff image"));  
+
             return $fields; 
         }     	
 

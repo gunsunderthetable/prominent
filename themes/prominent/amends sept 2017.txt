@@ -1,0 +1,33 @@
+Font - Along with changing the logo and colours for the revised brand guidelines we need to alter the secondary typeface which is now – ROBOTO https://fonts.google.com/specimen/Roboto Can you change this site wide from Monserrat and make the basic text typeface the ‘Light’ version. Once you have changed this I will go through the site and suggest any amends to font sizing and spacing.
+
+Quote boxes – typeface is too small on quotes used on Blog pages. See http://prominent.testing.suffolkbiz.default.suffolkbiz.uk0.bigv.io/blog/prominent-signed-by-national-federation-of-roofing-contractors/
+
+Right hand column – this is not appearing across the entire site content pages, can you with this on? It only works on team member pages http://prominent.testing.suffolkbiz.default.suffolkbiz.uk0.bigv.io/test-team-page/helen-rudd/
+Right hand column – title of block needs to relate to section of website. So, if in 'Our Services' the block will be titled ‘Our Services’. 
+
+Awards listing page – is this template under construction?
+
+Blocks – is it possible to change the colour of the tiles on listing pages, Blog and Our Services? At the moment they are all blue - http://prominent.testing.suffolkbiz.default.suffolkbiz.uk0.bigv.io/our-services
+
+Team member listing tiles – Linkedin and email icon to be added
+
+Footer – change to alternative grey in revised guidelines (emailed earlier in the week)
+Ok, so I have compared the grey colours and to give some consistency across the template can we use the new hex colour for the footer and also the pull quotes and picture captions - grey: #d1d3d4, Leave the grey on boxes as it is.
+
+
+
+Images on content pages – images added to page look pixelated despite the image being high-res? Any idea why?
+
+Related content boxes – are you able to add the line of three boxes that sit beneath the page content and above the page footer – see below
+
+
+
+Font sizes – can you add a new style sheet for a sub title – can you match the font size used in the footer for ‘Contact Us’ but don’t make it all capitals
+
+Logo – the logo has been slightly cropped on the full stop, can you replace please
+
+Hosting – can you let Abi know what she needs to do in order for you to take over the hosting of the website? She wants to inform the company they are leaving them asap.
+
+
+
+

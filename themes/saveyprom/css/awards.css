@@ -1,0 +1,27 @@
+/*---------------------------------------- awards boxes ---------------------------------------------------*/
+
+.boxText {
+}
+
+
+.boxText h2 {
+}
+
+.boxText p {
+}
+
+.boxText a.readMore {
+    font-size:1.2em;
+    font-weight:300;
+    color:white;
+}
+
+.pageContent img.boxImage {
+    position:relative;
+    width:30%;
+    display:block;
+    height:auto;
+    padding:5% 35%;
+    opacity:1;
+}
+

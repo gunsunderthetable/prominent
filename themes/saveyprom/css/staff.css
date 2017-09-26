@@ -1,0 +1,131 @@
+
+/*---------------------------------------- homepage boxes ---------------------------------------------------*/
+#staffList {
+    width:100%;
+    position:relative;
+    margin:20px 0 20px;
+}
+.staffPanel {
+    position: relative;
+    width: 100;   
+    overflow:hidden;
+    margin:6px;
+    color:white;
+    background:#adabae;
+    /*opacity:0.9;*/
+    -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease;
+    z-index:1;
+}
+.staffPanel:hover {
+    opacity:0.9;
+}
+
+.staffPanel:before {
+    content: "";
+    display: block;
+    padding-top: 40%; 
+}
+
+.content{
+    /* this is the div within the box--*/
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.staffPanel .boxText {
+    position:absolute;
+    z-index:99;
+    width:40%;
+    height:100%;
+    padding:14% 5%;
+    top:0;
+    left:0;
+    text-align:center;
+}
+
+.staffPanel.even .boxText  {
+    left:50%;
+}
+
+.staffPanel .boxText  h2 {
+    font-size:1.6em;
+    margin:0;
+    line-height:1.1;
+    color:white;
+    letter-spacing:0.3px;
+}
+.staffPanel .boxText p {
+    margin-bottom:0;
+    font-size:1.3em;
+    font-weight:300;
+    color:white;
+}
+.staffPanel .boxText a {
+    font-size:1.2em;
+    font-weight:300;
+    color:white;
+}
+
+
+.pageContent .staffPanel img.boxImage {
+    /* ----- fixes pagecontent adding padding to box images - unwanted effect ----- */
+    position:absolute;
+    top:0;
+    left:50%;
+    width:50%;
+    height:auto;
+    z-index:88;
+    padding-top:0;
+    opacity:1;
+}
+
+.pageContent .staffPanel.even img.boxImage {
+    left:0;
+}
+
+.staffPanel .boxTextDivider {
+    width:100%;
+    margin: 12px 0;
+    height:2px;
+    background:white;
+}
+
+/*------------------------colours for boxes ---------------------*/
+.blue {
+    background:#455170;
+}
+.darkblue {
+    background:#17264c;
+}
+.grey {
+    background:#5c6670;
+}
+.pink {
+    background:#e12e90;
+}
+
+/*-------------------------links--------------------------*/
+
+.staffLinks {
+    position:absolute;
+    z-index:99;
+    width:16%;
+    height:auto;
+    padding:0 18%;
+    bottom:20%;
+    left:0;
+    text-align:center;
+}
+
+.staffLinks img {
+    width:40%;
+    padding:0 3%;
+    float:left;
+}
+
+.staffPanel.even .staffLinks {
+    padding:0 68%;
+}
