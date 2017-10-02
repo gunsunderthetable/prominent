@@ -1,13 +1,17 @@
 /*---------------------------------------- awards boxes ---------------------------------------------------*/
 
-.boxText {
+.box.award {
+    position: relative;
+    width: 16.05%;   
+    overflow:hidden;
+    margin:3px 0.3% ;
 }
 
 
-.boxText h2 {
-}
-
-.boxText p {
+.centredIntro {
+	width:60%;
+	padding:50px 0 30px 20%;
+	text-align: center;
 }
 
 .boxText a.readMore {
@@ -18,10 +22,27 @@
 
 .pageContent img.boxImage {
     position:relative;
-    width:30%;
+    width:40%;
     display:block;
     height:auto;
-    padding:5% 35%;
+    padding:15% 30%;
     opacity:1;
 }
 
+.AwardsHolder .boxTextDivider {
+	display:none;
+}
+.boxText {
+	top:23%;
+}
+.boxText h2 {
+	font-size:1em;
+}
+p.preadMore {
+	color:white;
+	position:absolute;
+	font-size:0.9em;
+	bottom:1%;
+	width:100%;
+	text-align:center;
+}

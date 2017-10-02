@@ -5,9 +5,9 @@ class Page extends SiteTree {
             'ShowNavigationPanel' => 'Boolean',
             'MenuIntro' => 'Text',
             'PageIntro' => 'Text',
-            'AlternateHeaderStyle' => 'Boolean'
+            'AlternateHeaderStyle' => 'Boolean',
+            "Colour" => "Enum('unselected,blue,darkblue,grey,pink','unselected')"
 	   );
-        
 	   private static $has_one = array(
             "MyWidgetArea" => "WidgetArea"
         );
@@ -18,6 +18,8 @@ class Page extends SiteTree {
         
        public function getCMSFields() {
             $fields = parent::getCMSFields();
+
+            $fields->addFieldToTab('Root.Main', new DropdownField("Colour", "Colour for the parent page",$this->dbObject('Colour')->enumValues()),'Content'); 
 
             $fields->addFieldToTab('Root.TileInfo', new TextAreaField("MenuIntro", "Parent page intro text")); 
             $fields->addFieldToTab('Root.Main', new TextAreaField("PageIntro", "Bold page intro text"), "Content");  
@@ -105,6 +107,7 @@ class Page_Controller extends ContentController {
                 Requirements::javascript('mysite/javascript/jquery-1.11.0.min.js');
                 Requirements::javascript('mysite/javascript/jquery.sidr.min.js');                
                 Requirements::javascript('mysite/javascript/site.js');
+                Requirements::javascript('mysite/javascript/classie.js');
                 
 		if($this->hasMap()){
 			$this->MakeGoogleMap();

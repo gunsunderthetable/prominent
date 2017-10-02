@@ -1,6 +1,6 @@
 <% if $Menu(2) %>
 <div id="subNav" class="nav desktop">
-   <h2>$Title</h2>
+   <h2><% if $Parent %>$Parent.Title<% else %>$Title<% end_if %></h2>
     <ul class="clearFix">
         <% loop Menu(2) %>
         <li>

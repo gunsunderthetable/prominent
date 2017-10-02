@@ -25,8 +25,9 @@
                             <div class="boxText">
                             <h2>$Title</h2>
                             <div class="boxTextDivider"></div>
-                            <p>$Description</p>
                             </div>
+                            <p class="preadMore">Read more ></p>
+
                            </a>
                         </div>
                     </div>

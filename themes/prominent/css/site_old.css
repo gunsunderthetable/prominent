@@ -12,25 +12,21 @@ body {
 
 h1,h2,h3,h4,h5 {
     font-weight:400;
-    color:#de1275;
+    color:#e12e90;
 }
 
 h1 {
     font-weight:300;
 }
-
 h2 {
     font-size: 2.4em;
 }
-
 h3 {
     font-size:1.4em;
 }
-
 p {
     line-height:1.5;
 }
-
 .light {
     font-weight:300;
 }
@@ -101,7 +97,7 @@ hr {
 }
 #mainNav ul {
     float:right;
-    padding:6px 100px 0;
+    padding:6px 160px 0;
     margin:0;
 }
 
@@ -151,7 +147,7 @@ a.mobileNav {
 #boxes {
     width:100%;
     position:relative;
-    margin:40px 0 20px;
+    margin:20px 0 20px;
 }
 .box {
     position: relative;
@@ -182,12 +178,8 @@ a.mobileNav {
     clear:left;
 }
 /*----------------------- end of alternate boxes --------------------------*/
-/*.ContentPage .box.position-1 {
-    width: 32.3%;   
-}
-.ContentPage .box.position-1:before {
-    padding-top:100%;
-}*/
+
+
 .box:before {
     content: "";
     display: block;
@@ -288,7 +280,7 @@ img.boxImage {
     background:#5c6670;
 }
 .pink {
-    background:#de1275;
+    background:#e12e90;
 }
 
 /*---------------------------main homepage panel-----------------------*/
@@ -316,8 +308,8 @@ img.boxImage {
     margin-bottom:30px;
 }
 .centredContent {
-    width:76%;
-    padding-left:12%;
+    width:50%;
+    padding-left:25%;
     text-align:center;
 }
 
@@ -710,6 +702,13 @@ img.center {
     width:100%;
     height:auto;
 }
+/*------------------------colours for blog boxes ---------------------*/
+.box.blogbox:nth-child(2n) {
+    background:#17264c;
+}
+.box.blogbox:nth-child(3n) {
+    background:#5c6670;
+}
 ol, ul {list-style-type:none}
 
 
@@ -829,11 +828,6 @@ input[type="checkbox"] {
     font-size:1em;
     color:grey;
 }
-ul#SearchResults li {
-    list-style-type: none;
-}
-
-p.searchQuery {padding:12px;}
 /*-------------------------------- Clear and be happy--------------------------------------------------*/
 
 .clearFix {

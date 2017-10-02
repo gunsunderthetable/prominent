@@ -17,7 +17,6 @@ class AwardsPage extends Page {
             $fields->removeByName("AlternateHeaderStyle");
             $fields->removeByName("TileInfo");
 
-
             $fields->addFieldToTab('Root.Main', new CheckBoxField("ListChildrenAsTiles", "List my child pages as tiles"), "Content");
 
             return $fields; 
