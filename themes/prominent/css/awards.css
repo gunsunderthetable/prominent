@@ -46,3 +46,7 @@ p.preadMore {
 	width:100%;
 	text-align:center;
 }
+
+@media (max-width: 820px) {
+    .box.award {width:31%;margin:1.1%}
+}

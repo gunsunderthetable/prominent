@@ -1,0 +1,12 @@
+Mobile version required – in hand once desktop site completed
+Title style of right hand column is inconsistent. Needs to all be in upper and lowercase across all pages - http://www.prominentpr.co.uk/services/pr-strategy/ and http://www.prominentpr.co.uk/work/attwells-solicitors/ ** it's showing what Abi has called the pages. If she uses upper case that's what will be shown.
+
+Original design had thin blue key line running length (top to bottom) of right hand column. ** I can't see this on the designs I have 
+Is it possible to make body text style paragraph break 75% of line height? Currently it leaves a full line? ** not much I can do - looks like the content has been pasted from somewhere else as the copy has <br> tags to make new lines. I can contol <p> paragraphs but not <br> breaks
+On the new awards page all the awards have been imported into ‘our awards’. Is there a way of moving everything after the first nine awards into the ‘client awards' section? Or can that only be done manually? ** the way this works is that the top level page looks for its children, then loops through using title then boxes. If Abi adds the relevant boxes to the Client awards they'll appear in the right place.
+On the new awards page can you remove the lighter blue tile option – should be dark blue, pink and grey options only ** the code's being reused so it wold be a reall chore to have to keep two sets of colours. If Abi doesn't like one of the colours then don't use it!
+Slider – can this be made another 60px shallower (30px from top and 30px from bottom) - sorry!
+Header menu disappears on Safari running on a Mac with operating system 10.11.5 – any ideas? ** I'll check on a Mac this afternoon - this was mentioned before - Sorry I overlooked it!
+
+Thanks for the changes.
+I think Rob meant 2,3,2,3,2,3 for the pattern. I think we currently have 2,3,2,3,2,2.

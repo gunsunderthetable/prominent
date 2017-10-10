@@ -1,4 +1,4 @@
-<div id="animationWrapper">
+<div id="animationWrapper" class="desktop">
 	<div class="content">
 		<div class="stub"><img src="$ThemeDir/images/pro-stub.png" /></div>
 		<div class="base professional"><img src="$ThemeDir/images/professional.png" /></div>

@@ -6,7 +6,8 @@ class Page extends SiteTree {
             'MenuIntro' => 'Text',
             'PageIntro' => 'Text',
             'AlternateHeaderStyle' => 'Boolean',
-            "Colour" => "Enum('unselected,blue,darkblue,grey,pink','unselected')"
+            "Colour" => "Enum('unselected,blue,darkblue,grey,pink','unselected')",
+            "VideoPaste" => "HTMLText"
 	   );
 	   private static $has_one = array(
             "MyWidgetArea" => "WidgetArea"
@@ -24,7 +25,9 @@ class Page extends SiteTree {
             $fields->addFieldToTab('Root.TileInfo', new TextAreaField("MenuIntro", "Parent page intro text")); 
             $fields->addFieldToTab('Root.Main', new TextAreaField("PageIntro", "Bold page intro text"), "Content");  
             $fields->addFieldToTab('Root.Main', new CheckBoxField("AlternateHeaderStyle", "Alternate header style"), "Content");
-            $fields->addFieldToTab('Root.Main', new CheckBoxField("ShowNavigationPanel", "Show right hand navigation"), "Content");  
+            $fields->addFieldToTab('Root.Main', new CheckBoxField("ShowNavigationPanel", "Show right hand navigation"), "Content"); 
+            $fields->addFieldToTab('Root.Video', new TextAreaField("VideoPaste", "Paste code from Youtube here:")); 
+
 
             $gridFieldBoxConfig = GridFieldConfig::create()->addComponents(
               new GridFieldSortableRows('SortOrder'),                         
@@ -32,7 +35,7 @@ class Page extends SiteTree {
               new GridFieldAddNewButton('toolbar-header-right'),
               new GridFieldSortableHeader(),
               new GridFieldDataColumns(),
-              new GridFieldPaginator(30),
+              new GridFieldPaginator(60),
               new GridFieldEditButton(),
               new GridFieldDeleteAction(),
               new GridFieldDetailForm()

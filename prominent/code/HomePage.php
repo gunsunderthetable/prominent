@@ -1,6 +1,16 @@
 <?php
 
     class HomePage extends Page {
+
+        public static $db = array(
+            "MobileTitle" => "Text",
+            "MobileText" => "Text"
+        );
+
+
+        public static $has_one = array(
+            "MobileHeader" => 'Image'
+        );
    
         public static $has_many = array(
             "Slides" => "Slide"
@@ -10,7 +20,6 @@
             $fields = parent::getCMSFields();
 
             $fields->removeByName("Map");
-
 
             $gridFieldBoxConfig = GridFieldConfig::create()->addComponents(
               new GridFieldSortableRows('SortOrder'),                         
@@ -26,6 +35,9 @@
 
             $gridField = new GridField("Slides", "Slides", $this->Slides(), $gridFieldBoxConfig);
             $fields->addFieldToTab("Root.Slides", $gridField); 
+            $fields->addFieldToTab("Root.MobileVersion",new UploadField('MobileHeader', 'Image'));
+            $fields->addFieldToTab("Root.MobileVersion",new TextField('MobileTitle', 'Mobile title'));
+            $fields->addFieldToTab("Root.MobileVersion",new TextAreaField('MobileText', 'Mobile text'));
 
             return $fields;
         }        

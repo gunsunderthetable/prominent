@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header" class="clearFix">
     <% include MainNav %>
     <div class="container">
         <div id="headerPanel" class="twelve columns clearFix">

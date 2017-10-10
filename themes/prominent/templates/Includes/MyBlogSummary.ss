@@ -2,7 +2,7 @@
     <div class="content">
         <a href="$Link">
         <% if $BlogImageID %>
-            <% if $First || $MultipleOf(7) %>
+             <% if $First || $MultipleOf(7) || $MultipleOf(11) %>
             <%-- trap first and everyseventh boxes and use different aspect --%>
                 <img class="boxImage" src="$BlogImage.CroppedImage(1040,520).URL" alt="$Title" title="$Title" />
             <% else %>

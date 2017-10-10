@@ -12,19 +12,11 @@
             <ul id="SearchResults">
                 <% loop $Results %>
                 <li>
-                    <h4>
-                        <a href="$Link">
-                            <% if $MenuTitle %>
-                            $MenuTitle
-                            <% else %>
-                            $Title
-                            <% end_if %>
-                        </a>
-                    </h4>
+                    <h3>$Title</h3>
                     <% if $Content %>
                         <p>$Content.LimitWordCountXML</p>
                     <% end_if %>
-                    <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">More about &quot;{$Title}&quot;...</a>
+                    <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more </a>
                 </li>
                 <% end_loop %>
             </ul>

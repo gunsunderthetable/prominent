@@ -11,9 +11,9 @@
 }
 
 .sb-search {
-	position: fixed;
+	position: absolute;
 	top:8px;
-	right:140px;
+	right:0px;
 	margin-top: 0;
 	width: 0%;
 	min-width: 60px;

@@ -24,9 +24,7 @@
                             <% end_if %>
                             <div class="boxText">
                             <h2>$Title</h2>
-                            <div class="boxTextDivider"></div>
                             </div>
-                            <p class="preadMore">Read more ></p>
 
                            </a>
                         </div>

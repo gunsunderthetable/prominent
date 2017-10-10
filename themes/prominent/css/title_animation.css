@@ -10,7 +10,7 @@
 #animationWrapper:before {
     content: "";
     display: block;
-    padding-top: 45%; 
+    padding-top: 41%; 
 }
 
 .content{
@@ -38,7 +38,7 @@
 .base {
 	opacity:0;
 	position:absolute;
-	top:36%;
+	top:35.7%;
 	left:26.3%;
 	width:45.5%;
 	height:auto;
@@ -69,7 +69,7 @@
 
 .final {
 	animation: 3s ease 18.5s normal forwards 1 fadeandstay;
-	top:37%;
+	top:36%;
 	width:56.5%;
 	left:8%;
 
